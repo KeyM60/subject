@@ -1,6 +1,5 @@
-package person_test.Array_jungol;
+package subject.Array_jungol;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Arr1 {
