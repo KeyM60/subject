@@ -60,8 +60,6 @@ public class Arr2 {
         break;
       }
     }
-
-
   }
 
   void test2() {
@@ -170,7 +168,7 @@ public class Arr2 {
     System.out.println("Successful : " + count);
   }
 
-  void test7() {
+  void test7() { // 좌측 0처리 안함.
     int[][] arr_num = new int[5][5];
 
     for (int i = 0; i < arr_num[0].length; i++) {
@@ -299,14 +297,10 @@ public class Arr2 {
             arr_num[i][j] = arr_num[i - 1][j - 1] + arr_num[i - 1][j + 1];
           }
         } else {
-          if (j == 0) {
-            arr_num[i][j] = arr_num[i - 1][j + 1];
+          if (j == 0 && j == arr_num[i].length-1) {
+            arr_num[i][j] = arr_num[i - 1][1];
           } else if (j == arr_num[i].length / 2) {
             arr_num[i][j] = arr_num[i - 1][j - 1] + arr_num[i - 1][j + 1];
-          } else if (j == arr_num[i].length - 1) {
-            arr_num[i][j] = arr_num[i - 1][j - 1];
-          } else {
-            arr_num[i][j] = 0;
           }
         }
       }
