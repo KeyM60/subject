@@ -4,7 +4,6 @@ public class Bike extends Wheeler {
 
   public Bike(String carName, int velocity, int wheelNumber) {
     super(carName, velocity, wheelNumber);
-    System.out.println("자전거 : 바퀴 " + wheelNumber + " 개 입니다.");
   }
   
   @Override
