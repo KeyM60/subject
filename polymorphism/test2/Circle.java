@@ -2,7 +2,7 @@ package subject.polymorphism.test2;
 
 public class Circle extends Shape {
 
-  private double radius;
+  private double radius = 0;
 
   public Circle(String name, double radius) {
     super(name);
