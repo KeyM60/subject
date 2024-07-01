@@ -13,7 +13,7 @@ public class CoffeShop {
     getSalesInfo(beverage);
 
     System.out.println("총 판매 금액==>" + getTotalPrice(beverage));
-    System.out.println("Coffe의 판매 개수=>" + Coffee.amount + "잔");
+    System.out.println("Coffee의 판매 개수=>" + Coffee.amount + "잔");
     System.out.println("Tea의 판매 개수=>" + Tea.amount + "잔");
   }
 
@@ -28,8 +28,8 @@ public class CoffeShop {
   //결과와 같이 총 판매금액을 구할 수 있도록 getTotalPrice메소드를 작성하세요.
   public static int getTotalPrice(Beverage[] beverage) {
     int sum_sell = 0;
-    for (int i = 0; i < beverage.length; i++) {
-      sum_sell += beverage[i].getPrice();
+    for (Beverage total : beverage) {
+      sum_sell += total.getPrice();
     }
     return sum_sell;
   }
