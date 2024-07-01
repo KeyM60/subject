@@ -6,18 +6,16 @@ public class Coffee extends Beverage {
 
   public Coffee(String name) {
     super(name);
-    this.amount += 1;
+    amount++;
     calcPrice();
   }
 
   @Override
   void calcPrice() {
-    if (getName().equals("Americano")) {
-      setPrice(1500);
-    } else if (getName().equals("CafeLatte")) {
-      setPrice(2500);
-    } else if (getName().equals("Cappuccino")) {
-      setPrice(3000);
+    switch (getName()) {
+      case "Americano" -> setPrice(1500);
+      case "CafeLatte" -> setPrice(2500);
+      case "Cappuccino" -> setPrice(3000);
     }
   }
 }
