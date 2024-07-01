@@ -2,13 +2,13 @@ package subject.polymorphism.test2;
 
 public class Rectangle extends Shape {
 
-  private double width;
-  private String hight;
+  private double width = 0;;
+  private String height = "0";
 
-  public Rectangle(String name, double width, String hight) {
+  public Rectangle(String name, double width, String height) {
     super(name);
     this.width = width;
-    this.hight = hight;
+    this.height = height;
   }
 
   void print() {
@@ -18,6 +18,6 @@ public class Rectangle extends Shape {
 
   @Override
   void calculationArea() {
-    setArea(width * Integer.parseInt(hight));
+    setArea(width * Integer.parseInt(height));
   }
 }
