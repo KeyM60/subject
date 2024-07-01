@@ -6,18 +6,16 @@ public class Tea extends Beverage {
 
   public Tea(String name) {
     super(name);
-
+    amount++;
     calcPrice();
   }
 
   @Override
   void calcPrice() {
-    if (getName().equals("lemonTea")) {
-      setPrice(1500);
-    } else if (getName().equals("ginsengTea")) {
-      setPrice(2000);
-    } else if (getName().equals("red ginsengTea")) {
-      setPrice(2500);
+    switch (getName()) {
+      case "lemonTea" -> setPrice(1500);
+      case "ginsengTea" -> setPrice(2000);
+      case "red ginsengTea" -> setPrice(2500);
     }
   }
 }
