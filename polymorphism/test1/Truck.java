@@ -4,7 +4,6 @@ public class Truck extends Wheeler {
 
   public Truck(String carName, int velocity, int wheelNumber) {
     super(carName, velocity, wheelNumber);
-    System.out.println("트럭 : 바퀴 " + wheelNumber + " 개 입니다.");
   }
 
 
