@@ -10,7 +10,7 @@ public class Search {
     String query = "select * from member";
     PreparedStatement pstmt = null;
     try {
-      pstmt = Jdbc_conn.connection().prepareStatement(query);
+      pstmt = connection().prepareStatement(query);
       ResultSet rs = pstmt.executeQuery();
         while (rs.next()) {
           int id = rs.getInt("id");
@@ -19,7 +19,7 @@ public class Search {
           System.out.printf("id : %d name : %s  job : %s%n", id, name, job);
         }
         pstmt.close();
-        Jdbc_conn.connection().close();
+        connection().close();
     } catch (Exception e) {
       System.out.println(e);
     }
