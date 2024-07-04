@@ -10,7 +10,7 @@ public class Delete {
     int result = 0;
     PreparedStatement pstmt = null;
     try {
-      pstmt = Jdbc_conn.connection().prepareStatement(query);
+      pstmt = connection().prepareStatement(query);
       pstmt.setInt(1, id);
 
       result = pstmt.executeUpdate();
@@ -21,7 +21,7 @@ public class Delete {
       }
 
       pstmt.close();
-      Jdbc_conn.connection().close();
+      connection().close();
     } catch (Exception e) {
       System.out.println(e);
     }
