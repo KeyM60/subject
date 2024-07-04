@@ -19,7 +19,6 @@ public class JdbcEx {
     String name = sc.nextLine();
     System.out.print("직업 : ");
     String job = sc.nextLine();
-    System.out.println();
 
     Member insert_mem = new Member(id, name, job);
     memberInsert(insert_mem);
