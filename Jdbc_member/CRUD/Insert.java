@@ -11,7 +11,7 @@ public class Insert {
     int result = 0;
     PreparedStatement pstmt = null;
     try {
-      pstmt = Jdbc_conn.connection().prepareStatement(query);
+      pstmt = connection().prepareStatement(query);
       pstmt.setInt(1, member.getId());
       pstmt.setString(2, member.getName());
       pstmt.setString(3, member.getJob());
@@ -22,7 +22,7 @@ public class Insert {
         System.out.println("멤버 정보 입력이 실패하였습니다.");
       }
       pstmt.close();
-      Jdbc_conn.connection().close();
+      connection().close();
     } catch (Exception e) {
       System.out.println(e);
     }
