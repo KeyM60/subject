@@ -1,9 +1,9 @@
 package day16.jdbcEx.CRUD;
 
-import day16.jdbcEx.Connection.Jdbc_conn;
+import static day16.jdbcEx.Connection.Jdbc_conn.connection;
 import java.sql.PreparedStatement;
 
-public class Update extends Jdbc_conn {
+public class Update {
 
   public static void memberUpdate(int id, String job) {
     String query = "UPDATE member SET job = ? where id = ? ";
