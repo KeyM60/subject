@@ -12,9 +12,6 @@ public class Search extends Jdbc_conn {
     try {
       pstmt = Jdbc_conn.connection().prepareStatement(query);
       ResultSet rs = pstmt.executeQuery();
-      if (!rs.next()) {
-        System.out.println("멤버 조회가 되지않습니다.");
-      } else {
         while (rs.next()) {
           int id = rs.getInt("id");
           String name = rs.getString("name");
@@ -23,7 +20,6 @@ public class Search extends Jdbc_conn {
         }
         pstmt.close();
         Jdbc_conn.connection().close();
-      }
     } catch (Exception e) {
       System.out.println(e);
     }
