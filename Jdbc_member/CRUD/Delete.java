@@ -1,9 +1,9 @@
 package day16.jdbcEx.CRUD;
 
-import day16.jdbcEx.Connection.Jdbc_conn;
+import static day16.jdbcEx.Connection.Jdbc_conn.connection;
 import java.sql.PreparedStatement;
 
-public class Delete extends Jdbc_conn {
+public class Delete {
 
   public static void memberDelete(int id) {
     String query = "DELETE FROM member where id = ? ";
