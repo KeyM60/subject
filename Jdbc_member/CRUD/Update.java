@@ -10,7 +10,7 @@ public class Update {
     int result = 0;
     PreparedStatement pstmt = null;
     try {
-      pstmt = Jdbc_conn.connection().prepareStatement(query);
+      pstmt = connection().prepareStatement(query);
       pstmt.setString(1, job);
       pstmt.setInt(2, id);
       result = pstmt.executeUpdate();
@@ -20,7 +20,7 @@ public class Update {
         System.out.println("멤버 정보 수정은 실패하였습니다.");
       }
       pstmt.close();
-      Jdbc_conn.connection().close();
+      connection().close();
     } catch (Exception e) {
       System.out.println(e);
     }
