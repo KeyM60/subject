@@ -1,10 +1,10 @@
 package day16.jdbcEx.CRUD;
 
-import day16.jdbcEx.Connection.Jdbc_conn;
+import static day16.jdbcEx.Connection.Jdbc_conn.connection;
 import day16.jdbcEx.Member.Member;
 import java.sql.PreparedStatement;
 
-public class Insert extends Jdbc_conn {
+public class Insert {
 
   public static void memberInsert(Member member) {
     String query = "insert into member values(?,?,?)";
